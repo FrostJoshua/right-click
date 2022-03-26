@@ -58,19 +58,7 @@ for(var i=0; i < 256; i++){
   newPic = "smallcontainer";
 
 document.getElementById(newPic).appendChild(toAdd);
-}
-
-html2canvas([document.getElementById('smallcontainer')], {
-    onrendered: function (canvas) {
-        document.getElementById('canvas').appendChild(canvas);
-        var data = canvas.toDataURL('image/png');
-        // AJAX call to send `data` to a PHP file that creates an image from the dataURI string and saves it to a directory on the server
-
-        var image = new Image();
-        image.src = data;
-        document.getElementById('image').appendChild(image);
-    }
-});
+};
 
 function myhref(web){
   window.location.href = web;}
